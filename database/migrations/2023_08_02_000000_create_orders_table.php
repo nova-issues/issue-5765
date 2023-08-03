@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
-            $table->integer('order_total')->unique();
+            $table->integer('order_total')->index();
             $table->timestamps();
         });
     }
